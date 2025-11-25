@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Samcreation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Samcreation présente les mangas d'Aelysse et les bandes dessinées de Namea." />
+
+  <style>
+    :root{
+      --bg:#050618;
+      --card:#ffffff;
+      --ink:#151524;
+      --sub:#555a70;
+      --accent:#ff7aa2;
+      --accent-alt:#5ec9ff;
+      --accent-ink:#220415;
+      --ring:#00000018;
+      --radius:18px;
+      --maxw:880px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 0% 0%, #3b38a6 0%, transparent 55%),
+        radial-gradient(800px 500px at 100% 100%, #8a5de6 0%, transparent 45%),
+        var(--bg);
+    }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px 24px 22px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.35), inset 0 0 0 1px var(--ring);
+    }
+
+    header h1{
+      margin:0 0 4px;
+      font-size:26px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    header p{
+      margin:0;
+      color:var(--sub);
+      font-size:14px;
+    }
+
+    .grid{
+      margin-top:22px;
+      display:grid;
+      gap:18px;
+    }
+
+    @media (min-width:720px){
+      .grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    .series{
+      border-radius:20px;
+      overflow:hidden;
+      background:#f7f7ff;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+
+    .series img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .series-body{
+      padding:14px 16px 16px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      flex:1;
+    }
+
+    .series-title{
+      margin:0;
+      font-size:18px;
+    }
+
+    .series-text{
+      margin:0;
+      font-size:14px;
+      color:var(--sub);
+      flex:1;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition:transform .16s, box-shadow .16s, background .16s, border-color .16s;
+      box-shadow:0 8px 18px rgba(0,0,0,0.12);
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:var(--accent-ink);
+      border-color:var(--accent);
+    }
+
+    .btn-secondary{
+      background:var(--accent-alt);
+      color:#02121e;
+      border-color:var(--accent-alt);
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 26px rgba(0,0,0,0.16);
+      filter:brightness(1.03);
+    }
+
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      font-size:13px;
+      color:var(--sub);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="card">
+      <header>
+        <h1>Samcreation</h1>
+        <p>Mangas et bandes dessinées originales autour d'Aelysse et de Namea.</p>
+      </header>
+
+      <section class="grid" aria-label="Univers de Samcreation">
+        <!-- Aelysse -->
+        <article class="series">
+          <img src="aelysse.png" alt="Les mangas d'Aelysse" />
+          <div class="series-body">
+            <h2 class="series-title">Les mangas d'Aelysse</h2>
+            <p class="series-text">
+           Découvre les Contes d'Aelysse et le monde d'Haudryane&nbsp;: un manga avec son histoire principale, ses hors-séries, ses clins d'œil humoristiques.
+            </p>
+             <a class="btn btn-primary" href="Aelysse/index.html">
+             Les contes d'Aelysse
+            </a>
+          </div>
+        </article>
+
+        <!-- Namea -->
+        <article class="series">
+          <img src="namea.png" alt="Les BD de Namea" />
+          <div class="series-body">
+            <h2 class="series-title">Les BD de Namea</h2>
+            <p class="series-text">
+                 Découvre les BDs de Namea, des univers fantastiques peuplés de personnages hauts en couleur et d’aventures pleines de magie.
+            </p>
+            <a class="btn btn-secondary" href="Namea/index.html">
+              Les BDs de Namea
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <div class="footer">
+        &copy; Samcreation
+      </div>
+    </main>
+  </div>
+</body>
+</html>
