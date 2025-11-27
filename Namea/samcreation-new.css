@@ -329,6 +329,10 @@ main{
   position:relative;
   overflow:hidden;
 }
+/* Pour Chiponette : bouton juste sous le texte, pas collé en bas de la carte */
+.volume-card .buttons-inline {
+  margin-top: 0.75rem;   /* ou ce que tu veux */
+}
 
 .volume-tag{
   position:absolute;
