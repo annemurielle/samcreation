@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://samcreation.ch/sitemap.xml
